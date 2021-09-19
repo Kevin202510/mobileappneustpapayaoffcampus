@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'checkbox-exercise',
+    loadChildren: () => import('./pages/checkbox-exercise/checkbox-exercise.module').then( m => m.CheckboxExercisePageModule)
+  },
+  {
+    path: 'radiobtn-exercise',
+    loadChildren: () => import('./pages/radiobtn-exercise/radiobtn-exercise.module').then( m => m.RadiobtnExercisePageModule)
+  },
 ];
 
 @NgModule({
